@@ -3,9 +3,11 @@
 Objects, decisions, decimals by Joako</h1>
 
 You add bodyTemp and determine if the user has a fever.<br>
-advanced: input type=text id="myText01" value="36.1"degrees Celius<br>
+advanced: input the body temp into the object<br>
 
-<input type=button value="Inout/Output" onclick="{
+Body Temp: <input type=text id="myText01" value="36.1">degrees Celius<br>
+
+<input type=button value="Input/Output" onclick="{
    let myPerson = {'age':'22', 'name':'Joako'};
 
    let myTemp = document.getElementbyId('myText01').value
@@ -13,7 +15,7 @@ advanced: input type=text id="myText01" value="36.1"degrees Celius<br>
    let myPrintout = 'myPerson object :' + JSON.stringify(myPerson, null, 3)
 + ' myPerson.age : ' + myPerson.age
    let myIf = 'cool'
-   if ( parseInt(myPerson.age) >=20) {myIf = 'You are an adoult'}
+   if ( parseInt(myPerson.age) >=20) {myIf = 'You are an adult'}
 
    document.getElementById('myDiv01').innerHTML = myIf
    document.getElementById('myTextArea01').value = myPrintout
