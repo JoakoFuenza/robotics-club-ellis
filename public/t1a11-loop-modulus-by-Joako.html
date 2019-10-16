@@ -1,6 +1,6 @@
 <h1 align=center>t1a11-loop-modulus-by-Joako</h1>
 
-Enter any number of loops <input type=text id="myText01" value="25"><br><br>
+Enter any number of loops <input type=text id="myText01" value="60"><br><br>
 
 <input type=button value="Modulus Decisions" onclick="{
 
@@ -12,20 +12,21 @@ Enter any number of loops <input type=text id="myText01" value="25"><br><br>
         myFontColour = 'black'
         let myMessage = ''
 
-        if (myLoop = 15) {
-            myFontColour = 'purple'
-            myMessage += 'My age'
-        }
-
-        if (myLoop = 42) {
+        if (myLoop == 42) {
             myFontColour = 'grey'
-            myMessage += 'The magic number'
+            myMessage += ' The magic number'
         }
 
-        if (myLoop = 57) {
+        if (myLoop == 57) {
             myFontColour = 'brown'
-            myMessage += 'Ellis age'
+            myMessage += ' Ellis age'
         }
+
+        if (myLoop % 2 == 1) {
+            myFontColour = 'red'
+            myMessage += ' Odd '
+        }
+
 
         if (myLoop % 5 == 0) {
             myFontColour = 'green'
@@ -37,10 +38,15 @@ Enter any number of loops <input type=text id="myText01" value="25"><br><br>
             myMessage += ' Divisible by 10 '
         }
 
+        if (myLoop == 15) {
+            myFontColour = 'purple'
+            myMessage += 'My age'
+        }
+
         myTemp += '<font color='+myFontColour+'> Loop # ' + myLoop + '</font>'+ myMessage +'<br>'
     }
 
     document.getElementById('myDiv01').innerHTML = myTemp
 }"><br><br>
 
-<div id="myDiv01>...</div>
+<div id="myDiv01">...</div>
