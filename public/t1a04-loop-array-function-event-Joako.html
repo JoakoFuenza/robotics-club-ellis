@@ -1,0 +1,29 @@
+<script>
+
+function myExampleFunction(){
+    let myTemp = document.getElementById('myText01').value
+    let mySum = ''
+    document.getElementById('myDiv01').innerHTML = ' '
+
+    myArry = new Array()
+    myArray[0] = 'Fred'
+    myArray[1] = 'Mary'
+    myArray[2] = 'Zizzy'
+
+    for (let myLoop=0;  myLoop < myTemp;  myLoop++){
+        mySum += 'Loop #: ' + myLoop + ' array entry: ' + myArray[myLoop]
++'<br>'
+    }
+    document.getElementById('myDiv01').innerHTLM = mySum
+}
+
+</script>
+
+<h1 align=center>t1a04-loop-array-function-event-Joako.html</h1>
+
+<input type=text id="myText01" value="3"><br>
+
+<input type=button value="loop-array-function-event" onmouseover="{
+}">
+
+<div id="myDiv01">...</div>
