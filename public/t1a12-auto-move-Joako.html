@@ -5,7 +5,10 @@ let MyInterval
 <h1 align=center>t1a12-auto-move-Joako</h1>
 make all directions (in a table?) replace Fred with image<br>
 
-<div id="myDiv01" style="position:absolute; left:200; top:10; " >Fred</div>
+<img
+src="https://usercontent2.hubstatic.com/7423997_f520.jpg"
+width=200  id="myDiv01" style="position:absolute; left:200; top:300; "><br>
+
 
 <input type=button value="Go Right Auto" onclick="{
 
@@ -13,7 +16,7 @@ make all directions (in a table?) replace Fred with image<br>
     myInterval = setInterval(function(){
 
         document.getElementById('myDiv01').style.left =
-        parseInt(document.getElementById('myDiv01').style.left) + 10
+parseInt(document.getElementById('myDiv01').style.left) + 10
 
     } ,200)
 

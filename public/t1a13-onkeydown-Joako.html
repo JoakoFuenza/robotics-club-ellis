@@ -1,0 +1,33 @@
+<script>
+let MyInterval
+
+function myIsOnScreen(){
+    if (parseInt(document.getElemtenById('myDiv01').style.left) > 400) {
+        document.getElementById('myDiv01').style.left = '397px'
+    }
+}
+
+</script>
+<body onkeydown="{
+
+    let myKey = event.key
+//  let myKey = String.toLowerCase(event.key)
+
+  if (myKey == 'd') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+
+          document.getElementById('myDiv01').style.left =
+              parseInt(document.getElementById('myDiv01').style.left) + 3
+      } ,20)
+  }
+
+}">
+
+<h1 align=center>t1a13-onkeydown-Joako</h1>
+Get WASD working, what about a second object cocntrolled by arrows<br>
+
+<img id="myDiv01" src="https://usercontent2.hubstatic.com/7423997_f520.jpg"
+width=200  style="position:absolute; left:200; top:300; "><br>
+
+</body>
