@@ -1,5 +1,5 @@
 <script>
-let MyInterval
+let myInterval
 
 function myIsOnScreen(){
     if (parseInt(document.getElemtenById('myDiv01').style.left) > 400) {
@@ -7,8 +7,16 @@ function myIsOnScreen(){
     }
 }
 
+function myIsOnScreen(){
+    if (parseInt(document.getElemtenById('myDiv02').style.left) > 400) {
+        document.getElementById('myDiv02').style.left = '397px'
+    }
+}
+
 </script>
-<body onkeydown="{
+<body
+
+onkeydown="{
 
     let myKey = event.key
 //  let myKey = String.toLowerCase(event.key)
@@ -20,9 +28,52 @@ function myIsOnScreen(){
           document.getElementById('myDiv01').style.left =
               parseInt(document.getElementById('myDiv01').style.left) + 3
       } ,20)
+
+  }
+
+  if (myKey == 'ArrowRight') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+
+          document.getElementById('myDiv02').style.left =
+              parseInt(document.getElementById('myDiv02').style.left) + 3
+      } ,20)
+
+  }
+
+  if (myKey == 'a') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+
+          document.getElementById('myDiv01').style.left =
+              parseInt(document.getElementById('myDiv01').style.left) - 3
+      } ,20)
+
+  }
+
+  if (myKey == 'w') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+
+          document.getElementById('myDiv01').style.top =
+              parseInt(document.getElementById('myDiv01').style.top) - 3
+      } ,20)
+
+  }
+
+  if (myKey == 's') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+
+          document.getElementById('myDiv01').style.top =
+              parseInt(document.getElementById('myDiv01').style.top) + 3
+      } ,20)
+
   }
 
 }">
+
+</body>
 
 <h1 align=center>t1a13-onkeydown-Joako</h1>
 Get WASD working, what about a second object cocntrolled by arrows<br>
@@ -30,4 +81,6 @@ Get WASD working, what about a second object cocntrolled by arrows<br>
 <img id="myDiv01" src="https://usercontent2.hubstatic.com/7423997_f520.jpg"
 width=200  style="position:absolute; left:200; top:300; "><br>
 
-</body>
+<img id="myDiv02" src="https://ih0.redbubble.net/image.232088492.8404/aps,650x642,small,transparent-pad,750x1000,f8f8f8.u1.jpg"
+width=200  style="position:absolute; left:500; top:300; "><br>
+
