@@ -51,6 +51,16 @@ onkeydown="{
 
   }
 
+  if (myKey == 'ArrowLeft') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+
+          document.getElementById('myDiv02').style.left =
+              parseInt(document.getElementById('myDiv02').style.left) - 3
+      } ,20)
+
+  }
+
   if (myKey == 'w') {
       clearInterval(myInterval)
       myInterval = setInterval(function(){
@@ -61,12 +71,32 @@ onkeydown="{
 
   }
 
+  if (myKey == 'ArrowUp') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+
+          document.getElementById('myDiv02').style.top =
+              parseInt(document.getElementById('myDiv02').style.top) - 3
+      } ,20)
+
+  }
+
   if (myKey == 's') {
       clearInterval(myInterval)
       myInterval = setInterval(function(){
 
           document.getElementById('myDiv01').style.top =
               parseInt(document.getElementById('myDiv01').style.top) + 3
+      } ,20)
+
+  }
+
+  if (myKey == 'ArrowDown') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+
+          document.getElementById('myDiv02').style.top =
+              parseInt(document.getElementById('myDiv02').style.top) + 3
       } ,20)
 
   }
