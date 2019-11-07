@@ -1,24 +1,70 @@
+
 <h1 align=center>t2a01-calculator-Joako.html</h1>
 
+<style>
 
-<input type=text id="num1" value='0' size=1 >
+body { background-color: black;
+color :white
+}
+
+</style>
+
+<input type=text id="num1" value='' size=1 >
 
 <select id="operation" size=1 onChange="{
-
 }">
 
 <option value="+">+
 <option value="-">-
 <option value="*">*
+<option value="/">/
 </select>
 
-<input type=text id="num2" value='0' size=1 >
+<input type=text id="num2" value='' size=1 >
 
 <input type=button value='=' onclick="{
 
-    if operation == "+" );  {
-        (num1 + num2)
-    }>
+    let myTotal = ''
 
-<div id="result">...</div><br>
-<textarea id="result" rows=10 cols=80 noWRAP>...</textarea>
+myNum1 = parseFloat(document.getElementById('num1').value)
+//alert(num1)
+
+myNum2 = parseFloat(document.getElementById('num2').value)
+
+
+    if (document.getElementById('operation').value == '+' )  {
+
+        myTotal = myNum1 + myNum2
+         }
+
+
+    if (document.getElementById('operation').value == '-' )  {
+
+        myTotal = myNum1 - myNum2
+         }
+
+
+    if (document.getElementById('operation').value == '*' )  {
+
+        myTotal = myNum1 * myNum2
+         }
+
+
+    if (document.getElementById('operation').value == '/' )  {
+
+        myTotal = myNum1 / myNum2
+         }
+
+
+document.getElementById('resultDiv').innerHTML = myNum1 + document.getElementById('operation').value + myNum2 + ' = ' + myTotal
+document.getElementById('resultText').value= myNum1 + document.getElementById('operation').value + myNum2 + ' = ' + myTotal +  '\n'  + document.getElementById('resultText').value
+
+
+
+}">
+
+...copy result <input type=checkbox>
+
+
+<div id="resultDiv">...</div><br>
+<textarea id="resultText" rows=10 cols=80 noWRAP>...</textarea>
