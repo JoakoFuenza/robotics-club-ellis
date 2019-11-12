@@ -24,6 +24,8 @@ color :white
 
 <input type=button value='=' onclick="{
 
+myFunction()
+
     let myTotal = ''
 
 myNum1 = parseFloat(document.getElementById('num1').value)
@@ -56,14 +58,27 @@ myNum2 = parseFloat(document.getElementById('num2').value)
          }
 
 
+
+
 document.getElementById('resultDiv').innerHTML = myNum1 + document.getElementById('operation').value + myNum2 + ' = ' + myTotal
 document.getElementById('resultText').value= myNum1 + document.getElementById('operation').value + myNum2 + ' = ' + myTotal +  '\n'  + document.getElementById('resultText').value
+document.getElementById('myTotal').value = myTotal
 
 
 
 }">
 
-...copy result <input type=checkbox>
+...copy result <input type="checkbox" id="myCheck">
+
+<script>
+function myFunction(){
+   // alert(document.getElementById('myCheck').checked)
+    if (document.getElementById('myCheck').checked == true){
+        document.getElementById('num1').value = document.getElementById('myTotal').value
+        document.getElementById('num2').value = '3'
+    }
+}
+</script>
 
 
 <div id="resultDiv">...</div><br>
