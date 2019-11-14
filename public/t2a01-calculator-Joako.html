@@ -1,5 +1,5 @@
-
 <h1 align=center>t2a01-calculator-Joako.html</h1>
+
 
 <style>
 
@@ -24,7 +24,7 @@ color :white
 
 <input type=button value='=' onclick="{
 
-myFunction()
+//myFunction()
 
     let myTotal = ''
 
@@ -58,24 +58,23 @@ myNum2 = parseFloat(document.getElementById('num2').value)
          }
 
 
-
-
 document.getElementById('resultDiv').innerHTML = myNum1 + document.getElementById('operation').value + myNum2 + ' = ' + myTotal
 document.getElementById('resultText').value= myNum1 + document.getElementById('operation').value + myNum2 + ' = ' + myTotal +  '\n'  + document.getElementById('resultText').value
-document.getElementById('myTotal').value = myTotal
-
 
 
 }">
 
-...copy result <input type="checkbox" id="myCheck">
+<input value="clear" type="button" id="myCheck" onclick="
+document.getElementById('num1').value = ''
+document.getElementById('num2').value = ''
+">
 
 <script>
-function myFunction(){
+//function myFunction(){
    // alert(document.getElementById('myCheck').checked)
     if (document.getElementById('myCheck').checked == true){
-        document.getElementById('num1').value = document.getElementById('myTotal').value
-        document.getElementById('num2').value = '3'
+        document.getElementById('num1').value = ''
+        document.getElementById('num2').value = ''
     }
 }
 </script>
