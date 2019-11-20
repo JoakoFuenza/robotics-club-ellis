@@ -1,0 +1,46 @@
+<h2 align=center>Javascript Classes t2a04-classes-extend-Joako</h2>
+
+<style>
+
+body { background-color: black;
+color :white
+}
+
+</style>
+
+<input id="myButton131" type="button" value="Extend a class" onclick="{
+    class myAnimal {
+        contructor(passName, passAge) {
+            this.myName = passName;
+            this.myAge = passAge;
+        }
+        myShow(){
+            document.getElementById('myDiv131').innerHTML = 'Hello '+ this.myName +
+            '. You are' + this.myAge + ' years old<br>'
+        }
+    } // end class myAnimal
+    
+    class myCat extends myAnimal {
+        
+        myShow(){
+            document.getElementById('myDiv131').innerHTML = this.myName +
+            ' is a great cat who is ' + this.myAge + ' years old<br>'
+        }
+    } // end extends class myCat
+    
+        class myDog extends myAnimal {
+        
+        myShow(){
+            document.getElementById('myDiv131').innerHTML = this.myName +
+            ' is a great dog who is ' + this.myAge + ' years old<br>'
+        }
+    } // end extends class myDog
+    
+    myPet = new myCat('Fluffy', 14)
+    myPet.myShow()
+
+    myPet = new myDog('Jacky', 5)
+    myPet.myShow()
+}"><br><br>
+
+<div id='myDiv131'>...</div><br>
