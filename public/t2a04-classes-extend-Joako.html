@@ -27,19 +27,35 @@ color :white
             ' is a great cat who is ' + this.myAge + ' years old<br>'
         }
     } // end extends class myCat
-
-            class myDog extends myAnimal {
-        myShow(){
-            document.getElementById('myDiv131').innerHTML = this.myName +
-            ' is a great dog who is ' + this.myAge + ' years old<br>'
-        }
-    } // end extends class myDog
     
     myPet = new myCat('Fluffy', 14)
     myPet.myShow()
+}"><br><br>
+
+<div id='myDiv131'>...</div><br><br><br>
+
+
+<input id="myButton132" type="button" value="Extend a class" onclick="{
+    class myAnimal {
+        constructor(passName, passAge) {
+            this.myName = passName;
+            this.myAge = passAge;
+        }
+        myShow(){
+            document.getElementById('myDiv132').innerHTML = 'Hello '+ this.myName +
+            '. You are' + this.myAge + ' years old<br>'
+        }
+    } // end class myAnimal
+
+            class myDog extends myAnimal {
+        myShow(){
+            document.getElementById('myDiv132').innerHTML = this.myName +
+            ' is a great dog who is ' + this.myAge + ' years old<br>'
+        }
+    } // end extends class myDog
 
     myPet = new myDog('Jacky', 5)
     myPet.myShow()
 }"><br><br>
 
-<div id='myDiv131'>...</div><br>
+<div id='myDiv132'>...</div><br><br><br>

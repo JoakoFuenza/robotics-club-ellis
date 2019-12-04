@@ -1,5 +1,13 @@
 <h2>t2a10-loacal-storage-name-by-Joako. instructions:</h2>
 
+<style>
+
+body { background-color: black;
+color :white
+}
+
+</style>
+
 <body onload="{
     myStorage = localStorage.getItem('myStoredText')
     if(myStorage != null){
@@ -22,5 +30,7 @@ placeholder="Write here to score"><br>
     docuemnt.getElementById('myText1').value = ''
 }">
 
-<input type="button"3546+84784531684651351469+9
-++++++++++++++
+<input type="button" value="Retrive Text" onclick="{
+    document.getElementById('myText1').value = 
+    localStorage.getItem('myStoredText')
+}">
