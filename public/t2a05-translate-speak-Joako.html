@@ -9,17 +9,24 @@ color :white
 </style>
 
 <script
-scr="http://translate.google.com/translate_a/element.js?cb=google
+src="http://translate.google.com/translate_a/element.js?cb=google
 TranslateElementInit"></script>
 <script
-scr='https://code.responsivevoice.org/responsivevoice.js'></script>
+src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+<script>
+function goolgleTranslateElementInit() {
+    new goolge.translate.TranslateElement({pageLanguage: 'en',
+    includedLanguajes: 'en,fr,de,ru'},'google_translate_element');
+}
+</script>
 
 
 <div id="google_translate_element">I really like javascript</div>
 
 
 <input type="button" value="initialize speak" onclick="{
-    let myVoice = 'Russion Female'
+    let myVoice = 'Russian Female'
     
 responsiveVoice.speak(document.getElementById('google_translate_element').innerText, 
 myVoice, {pitch: 1, rate: 1, volume : 1})
