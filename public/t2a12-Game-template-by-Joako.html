@@ -18,7 +18,7 @@ color :white
     let myClock
 
     // global functions here
-functions myHitOther(my1,my2){
+function myHitOther(my1,my2){
     left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
    top1    = parseInt(document.getElementById(my1).style.top)
@@ -52,12 +52,36 @@ function myCheckHit(){
 
 
 </script>
+<body
+
+onkeydown="{
+
+    let myKey = event.key
+//  let myKey = String.toLowerCase(event.key)
+
+  if (myKey == 'd') { document.getElementById('myImg01').style.left = 
+  parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+    myCheckHit()
+  }
+
+  if (myKey == 'a') { document.getElementById('myImg01').style.left = 
+  parseInt(document.getElementById('myImg01').style.left) - 10 + 'px'
+    myCheckHit()
+  }
+
+    if (myKey == 'w') { document.getElementById('myImg01').style.top = 
+  parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
+    myCheckHit()
+  }
+
+    if (myKey == 's') { document.getElementById('myImg01').style.top = 
+  parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+    myCheckHit()
+  }
+
+}">
+
+</body>
 
 <img id="myImg01" style="position:absolute; width:100px; height:100px; top:200px; left:50px;" src="Alan.gif">
 <img id="myImg02" style="position:absolute; width:100px; height:100px; top:200px; left:250px;" src="Bad guy.gif">
-
-
-<input type=button value="Image Right Fast Button onTouchStart"="{this.click(); event.preventDefault();}" onclick="{
-    document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-    myCheckHit()    // checks for all collisions
-}"><br><br>
