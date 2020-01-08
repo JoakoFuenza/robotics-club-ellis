@@ -14,6 +14,8 @@ color :white
 <script>
     let myInterval
 
+    let mySpot = 10
+
     // global
     let myGlobalX = 0
     let myClock
@@ -47,10 +49,15 @@ function myCheckHit(){
         //document.getElemetById('myImg01').style.left = '20px'
     }
     // more if statements here
-    if (myHitOther('myImg02','myImg04') ){
+    if (myHitOther('myImg01','myImg05') ){
         alert('you lose')
         //document.getElemetById('myImg01').style.left = '20px'
     }
+    if (myHitOther('myImg02','myImg04') ){
+        document.getElementById('myImg02').style.top =
+    parseInt(document.getElementById('myImg02').style.top) + parseFloat(document.getElementById('mySpot').value) * -1
+    }
+
 
 
 
@@ -99,7 +106,7 @@ onkeydown="{
     myInterval = setInterval(function(){
 
         document.getElementById('myImg02').style.top =
-parseInt(document.getElementById('myImg02').style.top) + 10
+parseInt(document.getElementById('myImg02').style.top) + mySpot
 
     } ,200)
 
