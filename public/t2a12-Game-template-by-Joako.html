@@ -12,6 +12,7 @@ color :white
 </style>
 
 <script>
+    let myInterval
 
     // global
     let myGlobalX = 0
@@ -41,10 +42,15 @@ function myCheckHit(){
         //document.getElemetById('myImg01').style.left = '20px'
     }
     if (myHitOther('myImg01','myImg03') ){
-        alert('you lose')
+        location='t2a12-Game-template-by-Joako.html'
+        //alert('you lose')
         //document.getElemetById('myImg01').style.left = '20px'
     }
     // more if statements here
+    if (myHitOther('myImg02','myImg04') ){
+        alert('you lose')
+        //document.getElemetById('myImg01').style.left = '20px'
+    }
 
 
 
@@ -87,6 +93,20 @@ onkeydown="{
 
 </body>
 
+<input type=button value="Start game" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myImg02').style.top =
+parseInt(document.getElementById('myImg02').style.top) + 10
+
+    } ,200)
+
+}">
+
 <img id="myImg01" style="position:absolute; width:57px; height:100px; top:200px; left:50px;" src="Alan.gif">
-<img id="myImg02" style="position:absolute; width:67px; height:100px; top:200px; left:250px;" src="Bad guy.gif">
+<img id="myImg02" style="position:absolute; width:67px; height:100px; top:200px; left:1400px;" src="Bad guy.gif">
 <img id="myImg03" style="position:absolute; width:36px; height:18px; top:400px; left:250px;" src="Bullet.gif">
+<img id="myImg04" style="position:absolute; width:75px; height:20px; top:650px; left:1400px;" src="bar.gif">
+<img id="myImg05" style="position:absolute; width:75px; height:20px; top:70px; left:1400px;" src="bar.gif">
