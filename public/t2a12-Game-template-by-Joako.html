@@ -14,8 +14,6 @@ color :white
 <script>
     let myInterval
 
-    let mySpot = 10
-
     // global
     let myGlobalX = 0
     let myClock
@@ -54,15 +52,23 @@ function myCheckHit(){
         //document.getElemetById('myImg01').style.left = '20px'
     }
     if (myHitOther('myImg02','myImg04') ){
+        clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
         document.getElementById('myImg02').style.top =
-    parseInt(document.getElementById('myImg02').style.top) + parseFloat(document.getElementById('mySpot').value) * -1
+parseInt(document.getElementById('myImg02').style.top) - 10
+
+    } ,200)
     }
+    if (myHitOther('myImg02','myImg05') ){
+        clearInterval(myInterval)
+    myInterval = setInterval(function(){
 
+        document.getElementById('myImg02').style.top =
+parseInt(document.getElementById('myImg02').style.top) + 10
 
-
-
-
-
+    } ,200)
+    }
 
 
 }
@@ -106,7 +112,19 @@ onkeydown="{
     myInterval = setInterval(function(){
 
         document.getElementById('myImg02').style.top =
-parseInt(document.getElementById('myImg02').style.top) + mySpot
+parseInt(document.getElementById('myImg02').style.top) + 10
+
+    } ,200)
+
+}">
+
+<input type=button value="Shoot" onclick="{
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+        document.getElementById('myImg03').style.left =
+parseInt(document.getElementById('myImg03').style.left) - 40
 
     } ,200)
 
@@ -114,6 +132,6 @@ parseInt(document.getElementById('myImg02').style.top) + mySpot
 
 <img id="myImg01" style="position:absolute; width:57px; height:100px; top:200px; left:50px;" src="Alan.gif">
 <img id="myImg02" style="position:absolute; width:67px; height:100px; top:200px; left:1400px;" src="Bad guy.gif">
-<img id="myImg03" style="position:absolute; width:36px; height:18px; top:400px; left:250px;" src="Bullet.gif">
+<img id="myImg03" style="position:absolute; width:36px; height:18px; top:400px; left:900px;" src="Bullet.gif">
 <img id="myImg04" style="position:absolute; width:75px; height:20px; top:650px; left:1400px;" src="bar.gif">
 <img id="myImg05" style="position:absolute; width:75px; height:20px; top:70px; left:1400px;" src="bar.gif">
