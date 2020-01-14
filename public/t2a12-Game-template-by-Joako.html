@@ -13,6 +13,8 @@ color :white
 
 <script>
     let myInterval
+    let myInterval2
+    //let myInterval3
 
     // global
     let myGlobalX = 0
@@ -47,16 +49,19 @@ function myCheckHit(){
         //document.getElemetById('myImg01').style.left = '20px'
     }
     // more if statements here
+    if (myHitOther('myImg01','myImg04') ){
+        alert('you lose')
+        //document.getElemetById('myImg01').style.left = '20px'
+    }
     if (myHitOther('myImg01','myImg05') ){
         alert('you lose')
         //document.getElemetById('myImg01').style.left = '20px'
     }
     if (myHitOther('myImg02','myImg04') ){
         clearInterval(myInterval)
-    myInterval = setInterval(function(){
+        myInterval = setInterval(function(){
 
-        document.getElementById('myImg02').style.top =
-parseInt(document.getElementById('myImg02').style.top) - 10
+        document.getElementById('myImg02').style.top =parseInt(document.getElementById('myImg02').style.top) - 10
 
     } ,200)
     }
@@ -64,8 +69,7 @@ parseInt(document.getElementById('myImg02').style.top) - 10
         clearInterval(myInterval)
     myInterval = setInterval(function(){
 
-        document.getElementById('myImg02').style.top =
-parseInt(document.getElementById('myImg02').style.top) + 10
+        document.getElementById('myImg02').style.top =parseInt(document.getElementById('myImg02').style.top) + 10
 
     } ,200)
     }
@@ -105,26 +109,31 @@ onkeydown="{
 }">
 
 </body>
-
 <input type=button value="Start game" onclick="{
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
 
-        document.getElementById('myImg02').style.top =
-parseInt(document.getElementById('myImg02').style.top) + 10
-
+        document.getElementById('myImg02').style.top = parseInt(document.getElementById('myImg02').style.top) + 10
+    
+    myCheckHit()
+        //document.getElementById('myText5').value = document.getElementById('myText5').value*1 + 1 [<input type=text value=0 id='myText5'>]
     } ,200)
+
+    //myInterval = setInterval(function(){
+
+      //  location'www.google.ca'
+    //} ,120000)
+
 
 }">
 
 <input type=button value="Shoot" onclick="{
 
-    clearInterval(myInterval)
-    myInterval = setInterval(function(){
+    clearInterval(myInterval2)
+    myInterval2 = setInterval(function(){
 
-        document.getElementById('myImg03').style.left =
-parseInt(document.getElementById('myImg03').style.left) - 40
+        document.getElementById('myImg03').style.left = parseInt(document.getElementById('myImg03').style.left) - 40
 
     } ,200)
 
@@ -132,6 +141,6 @@ parseInt(document.getElementById('myImg03').style.left) - 40
 
 <img id="myImg01" style="position:absolute; width:57px; height:100px; top:200px; left:50px;" src="Alan.gif">
 <img id="myImg02" style="position:absolute; width:67px; height:100px; top:200px; left:1400px;" src="Bad guy.gif">
-<img id="myImg03" style="position:absolute; width:36px; height:18px; top:400px; left:900px;" src="Bullet.gif">
+<img id="myImg03" style="position:absolute; width:36px; height:18px; top:400px; left:901px;" src="Bullet.gif">
 <img id="myImg04" style="position:absolute; width:75px; height:20px; top:650px; left:1400px;" src="bar.gif">
 <img id="myImg05" style="position:absolute; width:75px; height:20px; top:70px; left:1400px;" src="bar.gif">
