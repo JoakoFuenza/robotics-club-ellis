@@ -74,6 +74,32 @@ function myCheckHit(){
     } ,200)
     }
 
+function Shoot(){
+    var sprite = new Sprite('Bullet.gif');
+}
+
+
+myImg02.fire = function()
+    {
+    var myImg02Size = this.getSprite().getSize();
+    var myImg02Position = this.getPosition();
+
+    // calculate initial and final position for the bullet
+    var startX = myImg02Position.x + dx * myImg02Size.x / 2;
+    var startY = myImg02Position.y + dy * myImg02Size.y / 2;
+    var endX = startX + dx * 3000;
+    var endY = startY + dy * 3000;
+
+    // create bullet
+    var sprite = new Sprite('images/Bullet.gif');
+    var bullet = new SceneObject(sprite, 0, startX, startY);
+    wade.addSceneObject(bullet);
+    bullet.moveTo(endX, endY, 200);
+
+    // schedule next bullet
+    this.schedule(1000, 'fire');
+};
+enemy.schedule(500, 'fire');
 
 }
 
@@ -116,6 +142,7 @@ onkeydown="{
 
         document.getElementById('myImg02').style.top = parseInt(document.getElementById('myImg02').style.top) + 10
     
+    
     myCheckHit()
         //document.getElementById('myText5').value = document.getElementById('myText5').value*1 + 1 [<input type=text value=0 id='myText5'>]
     } ,200)
@@ -133,9 +160,9 @@ onkeydown="{
     clearInterval(myInterval2)
     myInterval2 = setInterval(function(){
 
-        document.getElementById('myImg03').style.left = parseInt(document.getElementById('myImg03').style.left) - 40
+        document.getElementById('myImg03').style.left = parseInt(document.getElementById('myImg03').style.left) - 10
 
-    } ,200)
+    } ,50)
 
 }">
 
