@@ -13,8 +13,6 @@ color :white
 
 <script>
     let myInterval
-    let myInterval2
-    //let myInterval3
 
     // global
     let myGlobalX = 0
@@ -39,13 +37,19 @@ function myHitOther(my1,my2){
 }
 
 function myCheckHit(){
-    if (myHitOther('myImg01','myImg02') ){
+    if (myHitOther('myImg01','myImg03') ){
         alert('you lose')
+        location = 't2a12-Game-template-by-Joako.html'
         //document.getElemetById('myImg01').style.left = '20px'
     }
-    if (myHitOther('myImg01','myImg03') ){
-        location='t2a12-Game-template-by-Joako.html'
-        //alert('you lose')
+    if (myHitOther('myImg01','myImg10') ){
+        alert('you lose')
+        location = 't2a12-Game-template-by-Joako.html'
+        //document.getElemetById('myImg01').style.left = '20px'
+    }
+    if (myHitOther('myImg01','myImg02') ){
+        alert('you lose')
+        location = 't2a12-Game-template-by-Joako.html'
         //document.getElemetById('myImg01').style.left = '20px'
     }
     // more if statements here
@@ -57,11 +61,27 @@ function myCheckHit(){
         alert('you lose')
         //document.getElemetById('myImg01').style.left = '20px'
     }
+    if (myHitOther('myImg01','myImg07') ){
+        alert('you lose')
+        //document.getElemetById('myImg01').style.left = '20px'
+    }
+    if (myHitOther('myImg01','myImg08') ){
+        alert('you lose')
+        //document.getElemetById('myImg01').style.left = '20px'
+    }
+    if (myHitOther('myImg01','myImg09') ){
+        alert('you lose')
+        //document.getElemetById('myImg01').style.left = '20px'
+    }
+    if (myHitOther('myImg01','myImg06') ){
+        location = 'http://www.google.ca'
+        //document.getElemetById('myImg01').style.left = '20px'
+    }
     if (myHitOther('myImg02','myImg04') ){
         clearInterval(myInterval)
         myInterval = setInterval(function(){
 
-        document.getElementById('myImg02').style.top =parseInt(document.getElementById('myImg02').style.top) - 10
+        document.getElementById('myImg02').style.top =parseInt(document.getElementById('myImg02').style.top) - 25
 
     } ,200)
     }
@@ -69,14 +89,10 @@ function myCheckHit(){
         clearInterval(myInterval)
     myInterval = setInterval(function(){
 
-        document.getElementById('myImg02').style.top =parseInt(document.getElementById('myImg02').style.top) + 10
+        document.getElementById('myImg02').style.top =parseInt(document.getElementById('myImg02').style.top) + 25
 
     } ,200)
     }
-
-function Shoot(){
-    var sprite = new Sprite('Bullet.gif');
-}
 
 
 myImg02.fire = function()
@@ -113,22 +129,22 @@ onkeydown="{
 //  let myKey = String.toLowerCase(event.key)
 
   if (myKey == 'd') { document.getElementById('myImg01').style.left = 
-  parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+  parseInt(document.getElementById('myImg01').style.left) + 15 + 'px'
     myCheckHit()
   }
 
   if (myKey == 'a') { document.getElementById('myImg01').style.left = 
-  parseInt(document.getElementById('myImg01').style.left) - 10 + 'px'
+  parseInt(document.getElementById('myImg01').style.left) - 15 + 'px'
     myCheckHit()
   }
 
     if (myKey == 'w') { document.getElementById('myImg01').style.top = 
-  parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
+  parseInt(document.getElementById('myImg01').style.top) - 15 + 'px'
     myCheckHit()
   }
 
     if (myKey == 's') { document.getElementById('myImg01').style.top = 
-  parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+  parseInt(document.getElementById('myImg01').style.top) + 15 + 'px'
     myCheckHit()
   }
 
@@ -140,34 +156,24 @@ onkeydown="{
     clearInterval(myInterval)
     myInterval = setInterval(function(){
 
-        document.getElementById('myImg02').style.top = parseInt(document.getElementById('myImg02').style.top) + 10
-    
-    
+        document.getElementById('myImg02').style.top = parseInt(document.getElementById('myImg02').style.top) + 25
+
     myCheckHit()
-        //document.getElementById('myText5').value = document.getElementById('myText5').value*1 + 1 [<input type=text value=0 id='myText5'>]
+    
     } ,200)
-
-    //myInterval = setInterval(function(){
-
-        //location'www.google.ca'
-    //} ,60000)
-
-
-}">
-
-<input type=button value="Shoot" onclick="{
-
-    clearInterval(myInterval2)
-    myInterval2 = setInterval(function(){
-
-        document.getElementById('myImg03').style.left = parseInt(document.getElementById('myImg03').style.left) - 10
-
-    } ,50)
-
+        
 }">
 
 <img id="myImg01" style="position:absolute; width:57px; height:100px; top:200px; left:50px;" src="Alan.gif">
 <img id="myImg02" style="position:absolute; width:67px; height:100px; top:200px; left:1400px;" src="Bad guy.gif">
-<img id="myImg03" style="position:absolute; width:36px; height:18px; top:400px; left:901px;" src="Bullet.gif">
+<img id="myImg03" style="position:absolute; width:20px; height:20px; top:400px; left:901px;" src="spike.gif">
+<img id="myImg10" style="position:absolute; width:20px; height:20px; top:550px; left:501px;" src="spike.gif">
+
 <img id="myImg04" style="position:absolute; width:75px; height:20px; top:650px; left:1400px;" src="bar.gif">
 <img id="myImg05" style="position:absolute; width:75px; height:20px; top:70px; left:1400px;" src="bar.gif">
+
+
+<img id="myImg06" style="position:absolute; width:20px; height:600px; top:70px; left:1530px;" src="win.gif">
+<img id="myImg07" style="position:absolute; width:1590px; height:20px; top:45px; left:-40px;" src="wallh.gif">
+<img id="myImg08" style="position:absolute; width:1590px; height:20px; top:680px; left:-40px;" src="wallh.gif">
+<img id="myImg09" style="position:absolute; width:20px; height:600px; top:70px; left:-25px;" src="wallv.gif">
